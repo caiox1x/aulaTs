@@ -1,0 +1,26 @@
+import { Pessoa } from "./Pessoa";
+
+export class Cliente extends Pessoa{
+   assinante: boolean;
+
+   constructor(nome: string, idade: number, estado: string, cidade: string, assinante: boolean, cpf: string){
+        super(nome, idade, estado, cidade, cpf);
+        this.assinante = assinante
+   }
+
+   public getCpf(): string {
+    return this.cpf
+   }
+
+   public setCpf(cpf: string): void{
+    this.cpf = cpf
+   }
+
+   public verificarAssinatura(){
+     if(this.assinante){
+        console.log("É assinante");
+     } else{
+        console.log("Não é assinante");
+     }
+   };
+};
